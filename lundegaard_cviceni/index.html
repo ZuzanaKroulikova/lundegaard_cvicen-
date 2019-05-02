@@ -3,17 +3,18 @@
   <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="generator" content="PSPad editor, www.pspad.com">
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-   <link rel="stylesheet" type="text/css" href="style.css">
+  
   <script src='https://code.jquery.com/jquery-2.1.3.min.js'></script>
-  <link href='B.png' rel='shortcut icon' type='image/png'>
   <script src="bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js" > </script>
-  <script src='https://code.jquery.com/jquery-2.1.3.min.js'></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href='B.png' rel='shortcut icon' type='image/png'>
    
   <title>Banche bank</title>
   </head>
     
   <body>
+      
       <div class="container-fluid">
       <nav class="navbar navbar-expand-lg">
           <div class="logo_phone">
@@ -63,6 +64,7 @@
               </div>
           </div>
       </nav>
+        
                              
        <div class="slideshow-container" id="slider">
             <div class="mySlides a fade">
@@ -102,60 +104,12 @@
           <span class="dot" onclick="currentSlide(3)"></span>
           <span class="dot" onclick="currentSlide(4)"></span>
         </div>
+           
+      <script src="slider.js"></script>
 
-    </div>              
-    </div>  
-      
-      
-    <script>
-        
-        
-        
-            let slideIndex = 0;
-            let slides = document.getElementsByClassName("mySlides");
-            let dots = document.getElementsByClassName("dot");            
-            showSlides();
-            
-                        
-            
-            function showSlides() {    
-                let i;    
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
-                }
-                slideIndex++;
-                if (slideIndex> slides.length) {
-                    slideIndex = 1;
-                } 
-                
-                for (i = 0; i < dots.length; i++) {
-                    dots[i].className = dots[i].className.replace(" active", "");
-                }
-                
-                slides[slideIndex-1].style.display = "block";
-                dots[slideIndex-1].className += " active";
-                setTimeout(showSlides, 8000);
-            }
-            
-            function currentSlide(no) {
-                let i;    
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none"; 
-                }
-                for (i = 0; i < dots.length; i++) {
-                    dots[i].className = dots[i].className.replace(" active", "");
-                }
-                slideIndex = no;
-                slides[no-1].style.display = "block";
-                dots[slideIndex-1].className += " active";
-           }
-                    
-    </script>
-
-      
+    </div> 
           
-          
-        
+    </div>             
         <div class="section">
             <div class="row">
                 <div class="col-lg-6">
