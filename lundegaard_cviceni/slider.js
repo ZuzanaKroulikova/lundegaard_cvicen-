@@ -1,7 +1,7 @@
 
             
 var slideIndex =0;
-            var slides = document.getElementsByClassName("mySlides");
+            var slides = document.getElementsById("mySlides");
             var dots = document.getElementsByClassName("dot");
             showSlides();
 
