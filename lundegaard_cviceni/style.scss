@@ -3,6 +3,7 @@
 $orange-color: #EE834E;
 $white-color: white;
 $blue-color: #50B4C4;
+$light-blue-color: #A2DCE1;
 $font: Montserrat, sans-serif;
 
 
@@ -15,7 +16,7 @@ $font: Montserrat, sans-serif;
 @keyframes  fade {
         0% {opacity: 0.1}
         20% {opacity: 0.8} 
-        85% {opacity: 0.1}
+        85% {opacity: 1}
         100% {opacity: 0.0}
     }
 
@@ -38,15 +39,13 @@ body{
     font-family: $font;
     font-weight: normal;
     position: relative;
-    margin: 0;
+    background: $light-blue-color;
 }
 
-.container-fluid{
-        padding: 0;   
-}
+
 
 .navbar{  
-        padding: 31px 5% 9px 5%;
+        padding-top: 31px;
         width: 100%;
 }
 
@@ -106,7 +105,7 @@ body{
 .searchGroup{
         border-bottom: 2px solid;
         color: $white-color;
-        .search {
+        .search{
                 text-align: center;
                 font-size: 13px;
                 border-style: none;
@@ -121,14 +120,23 @@ body{
                     color: $white-color;
                     font-size: 13px;
                 }
+                &::-moz-input-placeholder, &::-moz-input-text {
+                    color: $white-color;
+                    font-size: 13px;
+                }
+                &:-ms-input-placeholder, &:-ms-input-text {
+                    color: $white-color;
+                    font-size: 13px;
+                }
         }
 }
 
 .section{
-        width:90%;
-        margin-left: 5%;
-        margin-right: 5%;
+        position: relative;
+        max-width:992px;
+        margin: auto;
         color: $white-color;
+        background-color:  $white-color;
 }
 
 
@@ -150,9 +158,10 @@ body{
 }
 
 footer {
-        background: linear-gradient(243deg, #A2DCE1 0%, $blue-color 100%);
+        background: linear-gradient(243deg, $light-blue-color 0%, $blue-color 100%);
         position: relative;
-        width: 100%;
+        max-width: 992px;
+        margin: auto;
         padding-top: 79px;
         bottom: 0;
             .row{
@@ -228,15 +237,24 @@ footer {
 @media (max-width: 991px){
             
             .container-fluid{
-                background-image: url("face.png"), linear-gradient(243deg, #A2DCE1 0%, $blue-color 100%);
+                background: linear-gradient(243deg, $light-blue-color 0%, $blue-color 100%);
                 width:100%;
+                position: relative;
                 height: auto;
                 min-height: 550px;
-                background-repeat: no-repeat;
-                background-attachment: local;
-                background-position: right;
-                background-blend-mode: lighten;
-            }
+                padding: 0;
+                margin: auto;
+                &::before {
+                    content : "";
+                    display: block;
+                    position: absolute;
+                    background-image: url("face.png");
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0.11;
+                }
+        }
+            
     
             h2{
                 font-size: 10px;
@@ -246,6 +264,8 @@ footer {
             .navbar{
                     position: absolute;
                     z-index: 3;
+                    padding-left: 26px;
+                    padding-right: 28px;
             }
             .logo_phone {
                 position: relative;
@@ -310,7 +330,7 @@ footer {
                 left: 0;
                 right: 0;
                 z-index: 1;
-                background: linear-gradient(243deg, #A2DCE1 0%, $blue-color 100%);
+                background: linear-gradient(243deg, $light-blue-color 0%, $blue-color 100%);
                     .phone_mobile{
                         margin-top: 47px;
                         margin-bottom: 38px;
@@ -438,13 +458,13 @@ footer {
                                       opacity: 0;
                                       transform: scale(0.3);
                                       animation: move-chevron 3s ease-out infinite;
-                                        :first-child {
+                                        &:first-child {
                                           animation: move-chevron 3s ease-out 1s infinite;
                                         }
-                                        :nth-child(2) {
+                                        &:nth-child(2) {
                                           animation: move-chevron 3s ease-out 2s infinite;
                                         }
-                                        :before, :after {
+                                        &:before, &:after {
                                              content: '';
                                              position: absolute;
                                              top: 0;
@@ -452,11 +472,11 @@ footer {
                                              width: 50%;
                                              background: $orange-color;
                                         }
-                                        :before {
+                                        &:before {
                                              left: 0;
                                              transform: skewY(30deg);
                                         }
-                                        :after {
+                                        &:after {
                                              right: 0;
                                              width: 50%;
                                              transform: skewY(-30deg);
@@ -546,6 +566,7 @@ footer {
                         }
                 }
             .cell{
+                position: relative;
                 width: 267px;
                 height: 380px;
                 margin: auto;
@@ -601,16 +622,27 @@ footer {
 @media (min-width: 992px){
         
     .container-fluid{
-        background-image: url("face.png"), linear-gradient(243deg, #A2DCE1 0%, $blue-color 100%);
-        width:100%;
-        height: 624px;
-        background-repeat: no-repeat;
-        background-attachment: local;
-        background-position: center;
-        background-blend-mode: lighten;
-    }
+                background: linear-gradient(243deg, $light-blue-color 0%, $blue-color 100%);
+                max-width: 992px;
+                position: relative;
+                height: auto;
+                min-height: 624px;
+                padding: 0;
+                margin: auto;
+                &::before {
+                    content : "";
+                    display: block;
+                    position: absolute;
+                    background-image: url("face.png");
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0.11;
+                }
+        }
     .navbar{
         position: relative;
+        padding-left: 29px;
+        padding-right: 42px;
     }
    
     .logo_phone{
@@ -623,14 +655,18 @@ footer {
     }
     .menu{
         position: relative;
+        margin-bottom: auto;
             .phone_mobile{
                 display: none;
             }
             .nav-item{
+                 top: 0px;
                 font-size: 13px;
                 position: relative;
                     &.nav-link{
-                        padding: 13px;
+                        padding-left: 13px;
+                        padding-top: 0px;
+                        padding-right: 13px;
                     }
             }
             .dropdown:hover>.dropdown-menu {
@@ -762,13 +798,13 @@ footer {
                                 opacity: 0;
                                 transform: scale(0.3);
                                 animation: move-chevron 3s ease-out infinite;
-                            :first-child {
+                            &:first-child {
                                 animation: move-chevron 3s ease-out 1s infinite;
                             }
-                            :nth-child(2) {
+                            &:nth-child(2) {
                                 animation: move-chevron 3s ease-out 2s infinite;
                             }
-                            :before, :after {
+                            &:before, &:after {
                                  content: '';
                                  position: absolute;
                                  top: 0;
@@ -776,11 +812,11 @@ footer {
                                  width: 50%;
                                  background: $orange-color;
                             }
-                            :before {
+                            &:before {
                                  left: 0;
                                  transform: skewY(30deg);
                             }
-                            :after {
+                            &:after {
                                  right: 0;
                                  width: 50%;
                                  transform: skewY(-30deg);
@@ -844,7 +880,7 @@ footer {
                img{
                    position: absolute;
                    right: 193px;
-                    botom: 10px;
+                    bottom: 10px;
                     height: 270px;
                     z-index: -1;
                 }

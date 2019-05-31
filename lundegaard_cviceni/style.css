@@ -13,7 +13,7 @@
   20% {
     opacity: 0.8; }
   85% {
-    opacity: 0.1; }
+    opacity: 1; }
   100% {
     opacity: 0.0; } }
 @-webkit-keyframes fade {
@@ -35,13 +35,10 @@ body {
   font-family: Montserrat, sans-serif;
   font-weight: normal;
   position: relative;
-  margin: 0; }
-
-.container-fluid {
-  padding: 0; }
+  background: #A2DCE1; }
 
 .navbar {
-  padding: 31px 5% 9px 5%;
+  padding-top: 31px;
   width: 100%; }
 
 .navbar-brand {
@@ -101,12 +98,19 @@ body {
     .searchGroup .search::-webkit-input-placeholder, .searchGroup .search::-webkit-input-text {
       color: white;
       font-size: 13px; }
+    .searchGroup .search::-moz-input-placeholder, .searchGroup .search::-moz-input-text {
+      color: white;
+      font-size: 13px; }
+    .searchGroup .search:-ms-input-placeholder, .searchGroup .search:-ms-input-text {
+      color: white;
+      font-size: 13px; }
 
 .section {
-  width: 90%;
-  margin-left: 5%;
-  margin-right: 5%;
-  color: white; }
+  position: relative;
+  max-width: 992px;
+  margin: auto;
+  color: white;
+  background-color: white; }
 
 .cell button {
   font-size: 13px;
@@ -125,7 +129,8 @@ body {
 footer {
   background: linear-gradient(243deg, #A2DCE1 0%, #50B4C4 100%);
   position: relative;
-  width: 100%;
+  max-width: 992px;
+  margin: auto;
   padding-top: 79px;
   bottom: 0; }
   footer .row {
@@ -186,14 +191,21 @@ footer {
 
 @media (max-width: 991px) {
   .container-fluid {
-    background-image: url("face.png"), linear-gradient(243deg, #A2DCE1 0%, #50B4C4 100%);
+    background: linear-gradient(243deg, #A2DCE1 0%, #50B4C4 100%);
     width: 100%;
+    position: relative;
     height: auto;
     min-height: 550px;
-    background-repeat: no-repeat;
-    background-attachment: local;
-    background-position: right;
-    background-blend-mode: lighten; }
+    padding: 0;
+    margin: auto; }
+    .container-fluid::before {
+      content: "";
+      display: block;
+      position: absolute;
+      background-image: url("face.png");
+      width: 100%;
+      height: 100%;
+      opacity: 0.11; }
 
   h2 {
     font-size: 10px;
@@ -201,7 +213,9 @@ footer {
 
   .navbar {
     position: absolute;
-    z-index: 3; }
+    z-index: 3;
+    padding-left: 26px;
+    padding-right: 28px; }
 
   .logo_phone {
     position: relative; }
@@ -362,21 +376,21 @@ footer {
         opacity: 0;
         transform: scale(0.3);
         animation: move-chevron 3s ease-out infinite; }
-        .mySlides.b .chevron_container .chevron :first-child {
+        .mySlides.b .chevron_container .chevron:first-child {
           animation: move-chevron 3s ease-out 1s infinite; }
-        .mySlides.b .chevron_container .chevron :nth-child(2) {
+        .mySlides.b .chevron_container .chevron:nth-child(2) {
           animation: move-chevron 3s ease-out 2s infinite; }
-        .mySlides.b .chevron_container .chevron :before, .mySlides.b .chevron_container .chevron :after {
+        .mySlides.b .chevron_container .chevron:before, .mySlides.b .chevron_container .chevron:after {
           content: '';
           position: absolute;
           top: 0;
           height: 100%;
           width: 50%;
           background: #EE834E; }
-        .mySlides.b .chevron_container .chevron :before {
+        .mySlides.b .chevron_container .chevron:before {
           left: 0;
           transform: skewY(30deg); }
-        .mySlides.b .chevron_container .chevron :after {
+        .mySlides.b .chevron_container .chevron:after {
           right: 0;
           width: 50%;
           transform: skewY(-30deg); }
@@ -453,6 +467,7 @@ footer {
         transition: 0.6s ease-in; }
 
   .cell {
+    position: relative;
     width: 267px;
     height: 380px;
     margin: auto;
@@ -497,16 +512,26 @@ footer {
       margin-bottom: 23px; } }
 @media (min-width: 992px) {
   .container-fluid {
-    background-image: url("face.png"), linear-gradient(243deg, #A2DCE1 0%, #50B4C4 100%);
-    width: 100%;
-    height: 624px;
-    background-repeat: no-repeat;
-    background-attachment: local;
-    background-position: center;
-    background-blend-mode: lighten; }
+    background: linear-gradient(243deg, #A2DCE1 0%, #50B4C4 100%);
+    max-width: 992px;
+    position: relative;
+    height: auto;
+    min-height: 624px;
+    padding: 0;
+    margin: auto; }
+    .container-fluid::before {
+      content: "";
+      display: block;
+      position: absolute;
+      background-image: url("face.png");
+      width: 100%;
+      height: 100%;
+      opacity: 0.11; }
 
   .navbar {
-    position: relative; }
+    position: relative;
+    padding-left: 29px;
+    padding-right: 42px; }
 
   .logo_phone {
     position: relative; }
@@ -516,14 +541,18 @@ footer {
       margin-left: 17px; }
 
   .menu {
-    position: relative; }
+    position: relative;
+    margin-bottom: auto; }
     .menu .phone_mobile {
       display: none; }
     .menu .nav-item {
+      top: 0px;
       font-size: 13px;
       position: relative; }
       .menu .nav-item.nav-link {
-        padding: 13px; }
+        padding-left: 13px;
+        padding-top: 0px;
+        padding-right: 13px; }
     .menu .dropdown:hover > .dropdown-menu {
       display: block; }
     .menu .dropdown > .dropdown-toggle:active {
@@ -632,21 +661,21 @@ footer {
           opacity: 0;
           transform: scale(0.3);
           animation: move-chevron 3s ease-out infinite; }
-          .mySlides.b .chevron_container .chevron :first-child {
+          .mySlides.b .chevron_container .chevron:first-child {
             animation: move-chevron 3s ease-out 1s infinite; }
-          .mySlides.b .chevron_container .chevron :nth-child(2) {
+          .mySlides.b .chevron_container .chevron:nth-child(2) {
             animation: move-chevron 3s ease-out 2s infinite; }
-          .mySlides.b .chevron_container .chevron :before, .mySlides.b .chevron_container .chevron :after {
+          .mySlides.b .chevron_container .chevron:before, .mySlides.b .chevron_container .chevron:after {
             content: '';
             position: absolute;
             top: 0;
             height: 100%;
             width: 50%;
             background: #EE834E; }
-          .mySlides.b .chevron_container .chevron :before {
+          .mySlides.b .chevron_container .chevron:before {
             left: 0;
             transform: skewY(30deg); }
-          .mySlides.b .chevron_container .chevron :after {
+          .mySlides.b .chevron_container .chevron:after {
             right: 0;
             width: 50%;
             transform: skewY(-30deg); }
@@ -701,7 +730,7 @@ footer {
       .mySlides.d img {
         position: absolute;
         right: 193px;
-        botom: 10px;
+        bottom: 10px;
         height: 270px;
         z-index: -1; }
 
