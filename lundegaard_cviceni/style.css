@@ -203,9 +203,13 @@ footer {
       display: block;
       position: absolute;
       background-image: url("face.png");
+      background-repeat: no-repeat;
+      width: 698px;
+      height: 606px;
+      background-position: top right;
       width: 100%;
       height: 100%;
-      opacity: 0.11; }
+      opacity: 0.21; }
 
   h2 {
     font-size: 10px;
@@ -318,9 +322,12 @@ footer {
     margin-right: auto;
     top: 145px; }
 
-  .mySlides.a {
+  .mySlides {
     width: 100%;
     height: 100%;
+    margin: auto; }
+
+  .mySlides.a {
     color: #B16C69; }
     .mySlides.a img {
       position: absolute;
@@ -349,9 +356,6 @@ footer {
         outline: none; }
 
   .mySlides.b {
-    width: 100%;
-    height: 100%;
-    margin: auto;
     color: white;
     /*POHYBUJÍCÍ SE ŠIPKY*/ }
     .mySlides.b img {
@@ -408,9 +412,7 @@ footer {
       transform: translateY(1000%) scale(0.5); } }
   .mySlides.c {
     text-align: center;
-    color: white;
-    width: 100%;
-    height: 100%; }
+    color: white; }
     .mySlides.c h3 {
       text-align: center;
       font-size: 34px;
@@ -437,9 +439,7 @@ footer {
 
   .mySlides.d {
     text-align: center;
-    color: white;
-    width: 100%;
-    height: 100%; }
+    color: white; }
     .mySlides.d h3 {
       position: relative;
       font-size: 34px;
@@ -526,7 +526,7 @@ footer {
       background-image: url("face.png");
       width: 100%;
       height: 100%;
-      opacity: 0.11; }
+      opacity: 0.21; }
 
   .navbar {
     position: relative;
@@ -591,12 +591,12 @@ footer {
       margin-left: 40px; }
 
   .slideshow-container {
-    width: 820px;
+    width: auto;
     height: 300px;
     position: relative;
-    margin: auto;
-    margin-top: 95px;
-    margin-bottom: 95px; }
+    margin-left: 35px;
+    margin-right: 35px;
+    margin-top: 95px; }
 
   .mySlides {
     display: none; }
@@ -607,7 +607,8 @@ footer {
       color: #B16C69; }
       .mySlides.a img {
         position: absolute;
-        height: 350px; }
+        height: 350px;
+        left: 50px; }
       .mySlides.a h3 {
         position: relative;
         font-size: 34px;
@@ -615,7 +616,7 @@ footer {
         width: 400px;
         text-align: right;
         margin-left: auto;
-        margin-right: 60px; }
+        margin-right: 100px; }
       .mySlides.a button {
         position: relative;
         font-size: 13px;
@@ -639,7 +640,8 @@ footer {
       .mySlides.b img {
         position: absolute;
         height: 100%;
-        width: auto; }
+        width: auto;
+        left: 50px; }
       .mySlides.b h3 {
         font-size: 34px;
         padding-top: 133px;
@@ -729,7 +731,7 @@ footer {
         padding-top: 186px; }
       .mySlides.d img {
         position: absolute;
-        right: 193px;
+        right: 240px;
         bottom: 10px;
         height: 270px;
         z-index: -1; }
