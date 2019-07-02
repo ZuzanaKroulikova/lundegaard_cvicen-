@@ -331,9 +331,10 @@ footer {
       width: 20px;
       height: 20px;
       margin-top: auto;
-      margin-bottom: 15px; }
+      margin-bottom: 10px; }
     .search-group .search {
-      margin: auto; }
+      margin: auto;
+      margin-bottom: 16px; }
 
   .slideshow-container {
     width: 267px;
